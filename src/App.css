@@ -9,23 +9,3 @@
   grid-template-columns: 2fr 10fr;
 
 }
-
-.header{
-  grid-area: h;
-  background-color: green;
-}
-
-.nav{
-  grid-area: n;
-  background-color: cadetblue;
-}
-
-.content{
-  grid-area: c;
-  background-color: aquamarine;
-}
-
-.logo{
-  width: 90px;
-  height: 90px;
-}
