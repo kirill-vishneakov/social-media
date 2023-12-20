@@ -1,17 +1,18 @@
 import React from "react"
 import style from './Profile.module.css'
 import MyPosts from './MyPosts/MyPosts.jsx'
+import ProfileInfo from "./ProfileInfo/ProfileInfo";
 
-const Profile = () => (
-  <div className={style.content}>
-    <div>
-      <img src="https://media.istockphoto.com/id/1225173869/photo/house-boat-anchored-in-lake-with-jungle-background-backwaters-kerala-india.jpg?s=612x612&w=0&k=20&c=uo-bsRQjhlT9AgeWBs_pkSvHQwStCelMC75EUpzwjHU=" />
-    </div>
-    <div>
-      ava + discription
-    </div>
-    <MyPosts />
-  </div>
-)
+const Profile = (props) => {
+    return(
+        <div>
+            <ProfileInfo />
+            <MyPosts
+                    dispatch={props.dispatch}
+                    newPostText={props.newPostText}
+                     postData={props.postData}/>
+        </div>
+    )
+}
 
 export default Profile
